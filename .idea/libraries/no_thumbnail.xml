@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="no_thumbnail">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/images/no_thumbnail.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

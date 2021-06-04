@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Ostream 스케줄 관리</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+   
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.css" rel="stylesheet">
+    <link href="../build/css/ostream.css" rel="stylesheet">
+    <link href="../build/css/scheduleList.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="category.html" class="site_title"><img src="../build/images/logo.png" alt="logo"><span>Ostream</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_info">
+                <h2>Hong Gildong</h2>
+                <ul class="profile_btn clearfix">
+                  <li class="password"><a href="#">비밀번호 변경</a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i>Log out</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-video-camera"></i> VOD Manager <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fileupload.html" target="_blank">파일업로드</a></li>
+                      <li><a href="category.html">카테고리</a></li>
+                      <li><a href="playlist.html">재생목록</a></li>
+                      <li><a href="profile.html">프로파일</a></li>
+                      <li><a href="storage.html">스토리지통계</a></li>
+                      <li><a href="encoding.html">인코딩통계</a></li>
+                      <li><a href="managecontents.html">컨텐츠확인</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-toggle-on"></i> Live Controller <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="channellist.html">채널관리</a></li>
+                      <li><a href="vgrouplist.html">VOD Group</a></li>
+                    </ul>
+                  </li>                 
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <div class="nav toggle">
+              <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    Hong Gildong
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <a class="dropdown-item"  href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                  <a class="dropdown-item"  href="javascript:;">Help</a>
+                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+
+                <li role="presentation" class="nav-item dropdown open">
+                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="text-center">
+                        <a class="dropdown-item">
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="upload_btn">
+                  <a href="fileupload.html" target="_blank">UPLOAD</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <div class="right_col ostream_main clearfix">
+
+          <!-- title 영역 시작 -->
+          <div class="title_wrap clearfix">
+            <div class="title">
+              <h3>스케줄 관리</h3>
+              <p>Home > <a href="category.html">VOD Manager</a> > <a href="scheduleList.html">스케줄 관리</a></p>
+            </div>
+            <div class="common_btn">
+              <!-- <button type="button" class="schedule_plus_btn">스케줄 등록 +</button> -->
+              <a href="#schedule_popup" class="schedule_plus_btn">스케줄 등록 +</a>
+            </div>
+          </div>
+          <!-- title 영역 끝 -->
+          
+          <!-- contents 영역 시작 -->
+          <div class="main_box clearfix">
+
+            <!-- Schedule 상단 영역 끝 --> 
+            <div class="schedule_setting clearfix">
+              <div class="tit_contents">
+                <h4><i class="fa fa-cog"></i>Schedule List</h4>
+                <p class="sub_tit_tip">* 총 26시간(전후 1시간)의 Schedule을 확일 할 수 있습니다.</p>
+                <div class="schedule_button clearfix">
+                  <button type="button" class="schedule_search"><i class="fa fa-filter"></i> 스케줄 검색</button>
+                  <button type="button" onclick="window.open('scheduleTable.html')"><i class="fa fa-list-ul"></i> 리스트 보기</button>
+                </div>
+              </div>
+            
+              <div class="date_wrap">
+                <p>오늘 날짜는 <span>05/11(화)</span>입니다.</p>
+                <div class="clearfix">
+                  <button type="button"><img src="../build/images/arrow_prev.png" alt="이전"></button>
+                  <span class="date">05월 20일 목요일</span>
+                  <button type="button"><img src="../build/images/arrow_next.png" alt="다음"></button>
+                </div>
+              </div>
+
+              <div class="contents_button clearfix">
+                <div class="auto_refresh_button clearfix">
+                  <p><img src="../build/images/refresh_icon.png" alt="자동새로고침"> 자동새로고침</p>
+                  <input type="checkbox" id="switch1" name="switch1" class="input_on-off"> 
+                  <label for="switch1" class="label_on-off"> 
+                      <span class="marble"></span> 
+                      <span class="on">ON</span> 
+                      <span class="off">OFF</span> 
+                  </label>
+                </div>
+                <div class="divider_line">/</div>
+                <div class="schedule_button clearfix">
+                  <p>스케줄</p>
+                  <input type="checkbox" id="switch2" name="switch2" class="input_on-off"> 
+                  <label for="switch2" class="label_on-off"> 
+                      <span class="marble"></span> 
+                      <span class="on">ON</span> 
+                      <span class="off">OFF</span> 
+                  </label>
+                </div>
+              </div>
+
+              <div class="schedule_search_popup">
+                <div class="search_date">
+                  <p>검색 날짜</p>
+                  <input type="date">
+                </div>
+                <div class="live_type1">
+                  <p>Live Type 1</p>
+                  <div class="scroll">                 
+                    <ul class="checkbox">
+                      <li>
+                        <input type="checkbox" id="kbs">
+                        <label for="kbs">kbs</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="linetv">
+                        <label for="linetv">라인TV</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="v">
+                        <label for="v">V앱</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="line">
+                        <label for="line">라인TV</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="live">
+                        <label for="live">라이브</label>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+                <div class="live_type2_click">
+                  Live Type 1을 선택해주세요.
+                </div>
+                <div class="live_type2">
+                  <p>Live Type 2</p>
+                  <div class="scroll">   
+                    <ul class="checkbox">
+                      <li>
+                        <input type="checkbox" id="test1">
+                        <label for="test1">LiveType2 test1</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="test2">
+                        <label for="test2">LiveType2 test2</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="test3">
+                        <label for="test3">LiveType2 test3</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="test4">
+                        <label for="test4">LiveType2 test4</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="test5">
+                        <label for="test5">LiveType2 test5</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button type="button" class="search">검색</button>
+              </div>
+            </div>
+            <!-- Schedule 상단 영역 끝 --> 
+
+            <!-- Schedule 영역 시작 -->  
+            <div class="schedule_body">
+              <div class="schedule_wrap clearfix">
+
+                <div class="day_wrap clearfix">
+                  <ul id="day_timelist">
+                    <li class="today_wrap">
+                      <p class="today_button">TODAY</p>
+                      <p>오늘 날짜 바로가기</p>
+                    </li>
+                  
+                  </ul>
+                </div>
+
+                <div class="schedule">
+                  <ul id="schedule_list">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Schedule 영역 끝 -->  
+
+            <!-- Schedule 등록, 상세보기 팝업 시작 -->     
+            <a href="#" id="schedule_popup" class="overlay"></a>
+            <div class="schedule_popup">
+
+              <div class="registration_tit">
+                <h4><i class="fa fa-cog"></i>스케줄 등록</h4>
+                <p class="sub_tit_tip">* 아래 내용을 입력 후 저장하시면 스케줄이 등록 됩니다.</p>
+              </div>
+
+              <div class="modify_tit">
+                <h4><i class="fa fa-cog"></i>스케줄 상세</h4>
+                <p class="sub_tit_tip">* 아래 내용을 확인 후 스케줄 내용 수정 및 스케줄 삭제가 가능합니다.</p>
+              </div>
+              
+              
+              <a class="close" href="#close">
+                <img src="../build/images/close.png" alt="닫기" class="close_icon">
+              </a>
+
+              <ul class="schedule_cont">
+                <li class="vid clearfix">
+                  <div>
+                    <P>VID</P> 
+                    <input type="text" placeholder="vid">
+                  </div>
+                  <ul class="checkbox clearfix">
+                    <li>
+                      <input type="checkbox" id="1">
+                      <label for="1">테스트 스케쥴</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="2">
+                      <label for="2">중계 취소 스케쥴</label>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="">
+                  <div>
+                    <P>스케줄명</P> 
+                    <input type="text" placeholder="스케줄명">
+                  </div>
+                </li>
+
+                <li class="line3 clearfix">
+                  <div class="left_box clearfix">
+                    <div class="start_time clearfix">
+                      <P>시작일시</P> 
+                      <input type="date">
+                      <div class="select_box">
+                        <p class="select_content">00시</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>00시</p>
+                            </li>
+                            <li>
+                              <p>01시</p>
+                            </li>
+                            <li>
+                              <p>02시</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_box">
+                        <p class="select_content">00시</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>00분</p>
+                            </li>
+                            <li>
+                              <p>01분</p>
+                            </li>
+                            <li>
+                              <p>02분</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right_box clearfix">
+                    <div class="finish_time clearfix">
+                      <P>종료일시</P> 
+                      <input type="date">
+                      <div class="select_box">
+                        <p class="select_content">00시</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>00시</p>
+                            </li>
+                            <li>
+                              <p>01시</p>
+                            </li>
+                            <li>
+                              <p>02시</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select_box">
+                        <p class="select_content">00시</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>00분</p>
+                            </li>
+                            <li>
+                              <p>01분</p>
+                            </li>
+                            <li>
+                              <p>02분</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="line4 clearfix">
+                  <div class="left_box clearfix">
+                    <div class="live_type1">
+                      <p>Live Type1</p>
+                      <div class="select_box">
+                        <p class="select_content">Live Type1</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>Live Type1</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="live_type2">
+                      <p>Live Type2</p>
+                      <div class="select_box">
+                        <p class="select_content">Live Type2</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>Live Type2</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="right_box clearfix">
+                    <div class="code">
+                      <p>국가코드</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>-</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p>채널명</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>채널명1</p>
+                            </li>
+                            <li>
+                              <p>채널명2</p>
+                            </li>
+                            <li>
+                              <p>채널명3</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </li>
+
+                <li class="line5 clearfix">
+                  <div class="left_box clearfix">
+                    <div class="source">
+                      <p>방송소스</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>gs</p>
+                            </li>
+                            <li>
+                              <p>push</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="source_name">
+                      <p>소스채널명</p>
+                      <input type="text" placeholder="소스채널명">
+                    </div>
+                  </div>
+
+                  <div class="right_box clearfix">
+                    <div>
+                      <p>라이브그룹</p>
+                      <div class="select_box">
+                        <p class="select_content">그룹등록 시 확인</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>라이브그룹</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p>영상타입</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>가로</p>
+                            </li>
+                            <li>
+                              <p>세로</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>   
+                  </div>               
+                </li>
+
+                <li class="line6">
+                  <div>
+                    <p>메모</p>
+                    <textarea name="memo" id="memo" cols="30" rows="10" placeholder="메모"></textarea>
+                  </div>                 
+                </li>
+
+                <li class="line7 clearfix">
+                  <div class="left_box clearfix">
+                    <div>
+                      <p>인코더 [MAIN]</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            <li>
+                              <p>-</p>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p>셋탑-채널 [MAIN]</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>-</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right_box clearfix">
+                    <div>
+                      <p>인코더 [BACKUP]</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>-</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <p>셋탑-채널 [BACKUP]</p>
+                      <div class="select_box">
+                        <p class="select_content">-</p>
+                        <div class="select_group">
+                          <ul>
+                            <li>
+                              <p>-</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>        
+                  </div>          
+                </li>
+              </ul>
+
+              <div class="registration_button clearfix">
+                <button type="button" class="save">저장</button>
+                <a class="close_btn" href="#close">닫기</a>
+              </div>
+
+              <div class="modify_button clearfix">
+                <button type="button" class="save modify_btn">수정</button>
+                <button type="button" class="del_btn">삭제</button>
+              </div>
+            </div>
+            <!-- Schedule 등록, 상세보기 팝업 끝 --> 
+            
+          </div>
+          <!-- contents 영역 끝 -->          
+        </div>
+        <footer></footer>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+    <!-- tooltip Scripts -->
+    <link type="text/css" href="../build/css/tooltip/jquery-ui.css" rel="stylesheet" />   
+    <script type="text/javascript" src="../build/js/jquery-ui.min.js"></script>
+
+    <script>
+
+      /*스케줄 시간*/
+      for (let i = 0 ; i < 26 ; i++) {
+      let li = '';
+      let day_timelist = ''
+      day_timelist += '<li class="">' +
+                        '<p class="day">04월 30일</p> ' +
+                        '<p>'+i+':00 ~'+'</p>' +                               
+                        '<ol class="min clearfix">';
+                        for (let j = 0; j < 60; j++)  {
+                          if(j % 10 === 0){
+                            li += '<li>' + j + '</li>' ;
+                          }else{
+                            li += '<li></li>' ;
+                          }
+                        }
+          day_timelist += li;
+          day_timelist += '</ol>' +             
+                        '</li>';
+        $("#day_timelist").append(day_timelist);
+        $('.day_wrap > ul > li:nth-child(2), .day_wrap > ul > li:nth-child(3)').addClass('day_first'); //날짜 나오는 classs명 day_first
+        $('.day_wrap > ul > li:nth-child(3)').addClass('time_refresh'); //현재 시간 class명 time_refresh
+      }
+
+      /*스케줄 내용*/
+      for (let i = 0 ; i < 10 ; i++) {
+      let schedule_list = '<li class="clearfix">' +
+                          //'<li class="other_livetype clearfix">' + //live type이 다를때, class명 추가 other_livetype
+                          '<div class="schedule_channel">' +
+                            '<span title="라이브 > Live Type2">라이브 > Live Type2</span>' +
+                            '<p title="kbs001"><img src="../build/images/monitoring.png" alt="모니터링 아이콘">kbs001</p>' +
+                            '</div>' +
+                            '<ul class="time_line clearfix">' + //ul은 26번 반복
+                              '<li>' + //스케줄은 1분에 width : 4.5px
+                                '<a href="#schedule_popup" class="schedule_box prev_schedule">' + //지난 스케줄 class명 prev_schedule
+                                  '<div>' +
+                                    '<img src="./images/prev_width.png" alt="">' +
+                                    '<p title="스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목">스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목</p>' +
+                                    '<p title="스케줄 시간">스케줄 시간</p>' +
+                                    '<p title="소스정보/test">소스정보/test</p>' +
+                                  '</div>' +
+                                '</a>' +
+                              '</li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +        
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +        
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li>' + //새로고침 시 나오는 빨간 선 class명 now_line
+                                '<a href="#schedule_popup" class="schedule_box now_schedule">' + //현재 스케줄 class명 now_schedule
+                                  '<div>' +
+                                    '<img src="./images/width.png" alt="">' +
+                                    '<p title="스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목">스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목</p>' +
+                                    '<p title="스케줄 시간">스케줄 시간</p>' +
+                                    '<p title="소스정보/test">소스정보/test</p>' +
+                                  '</div>' +
+                                  '<div class="progress_wrap">' + //현재 스케줄 진행률
+                                    '<div class="progress-bar"></div>' +
+                                  '</div>' +
+                                '</a>' +
+                              '</li>' +  
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                                            
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li class="now_line"></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +        
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li>' +
+                                '<a href="#schedule_popup" class="schedule_box next_schedule">' + //예정 스케줄 class명 next_schedule
+                                  '<div>' +
+                                    '<img src="./images/height.png" alt="">' +
+                                    '<p title="스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목">스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목스케줄 제목</p>' +
+                                    '<p title="스케줄 시간">스케줄 시간</p>' +
+                                    '<p title="소스정보/test">소스정보/test</p>' +
+                                  '</div>' +
+                                '</a>' +
+                              '</li>' +
+                              '<li></li>' +  
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                            '<ul class="time_line clearfix">' +     
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +
+                              '<li></li>' +                                                
+                            '</ul> ' +
+                          '</li>'
+      
+        $("#schedule_list").append(schedule_list);
+      }
+
+      /*스케줄 검색 팝업*/
+      $('.schedule_setting .schedule_button button.schedule_search').on('click', function(){
+        $('.schedule_search_popup').css({'opacity':'1', 'visibility':'visible'});
+      });
+      $('button.search').on('click', function(){
+        $('.schedule_search_popup').css({'opacity':'0', 'visibility':'hidden'});
+      });
+
+      /*live_type1 선택 후 live_type2 노출*/
+      $('.live_type1 .checkbox input + label').on('click', function(){
+        $('.live_type2_click').css("display", "none");
+        $('.live_type2').css("display", "block");
+      });
+
+      /*스케줄 등록, 상세 팝업*/
+      $('.schedule_plus_btn').on('click', function(){
+        $('.schedule_popup').removeClass('modify_popup');
+      });
+
+      $('.schedule_box').on('click', function(){
+        $('.schedule_popup').addClass('modify_popup');
+      });
+
+      /*스케줄 등록, 상세 선택박스*/
+      $('.select_content').on('click', function(){
+        $(this).next().toggle();
+      });
+
+      /*스케줄 박스 시작라인과 새고고침 빨간 선이랑 겹칠 때*/
+      $('.time_line li.now_line > div').css('border-left', 'none');
+
+      $(document).tooltip({
+          track: true
+      });
+      
+    </script>
+	
+  </body>
+</html>

@@ -1,0 +1,1258 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/montserrat-light.eot');
+    src: url('../../fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/montserrat-light.woff2') format('woff2'),
+         url('../../fonts/montserrat-light.woff') format('woff'),
+         url('../../fonts/montserrat-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/montserrat-light.eot');
+    src: url('../../fonts/montserrat-light.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/montserrat-light.woff2') format('woff2'),
+         url('../../fonts/montserrat-light.woff') format('woff'),
+         url('../../fonts/montserrat-light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../fonts/NanumGothic-Regular.eot');
+    src: url('../../fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumGothic-Regular.woff2') format('woff2'),
+    url('../../fonts/NanumGothic-Regular.woff') format('woff'),
+    url('../../fonts/NanumGothic-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../../fonts/NanumGothic-Bold.eot');
+    src: url('../../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumGothic-Bold.woff2') format('woff2'),
+    url('../../fonts/NanumGothic-Bold.woff') format('woff'),
+    url('../../fonts/NanumGothic-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nanum Gothic';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../fonts/NanumGothic-ExtraBold.eot');
+    src: url('../../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
+    url('../../fonts/NanumGothic-ExtraBold.woff') format('woff'),
+    url('../../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url('../../fonts/NanumSquareR.eot');
+    src: url('../../fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumSquareR.woff') format('woff'),
+    url('../../fonts/NanumSquareR.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 700;
+    src: url('../../fonts/NanumSquareB.eot');
+    src: url('../../fonts/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumSquareB.woff') format('woff'),
+    url('../../fonts/NanumSquareB.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url('../../fonts/NanumSquareEB.eot');
+    src: url('../../fonts/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumSquareEB.woff') format('woff'),
+    url('../../fonts/NanumSquareEB.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    src: url('../../fonts/NanumSquareL.eot');
+    src: url('../../fonts/NanumSquareL.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/NanumSquareL.woff') format('woff'),
+    url('../../fonts/NanumSquareL.ttf') format('truetype');
+}
+
+
+/*삭제할 내용 시작*/
+body {
+    font-family: 'NanumSquare', sans-serif;
+}
+button {
+    height: 30px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    padding: 0 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-weight: 600;
+    transform: skew(-0.028deg);
+    user-select : none;
+}
+button:focus {
+  outline:none;
+}
+ul, ol, dl {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/*삭제할 내용 끝*/
+
+.schedule_plus_btn {
+    display: block;
+    height: 30px;
+    padding: 6px 13px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 13px;
+    transform: skew(-0.028deg);
+    background: #252525;
+}
+.schedule_plus_btn:hover {
+    color: #fff;
+}
+.schedule_setting {
+    position: relative;
+    margin-bottom: 20px;
+}
+.schedule_setting > div {
+    float: left;
+    height: 84px;
+}
+
+/*스케줄검색, 리스트보기 버튼 시작*/
+.tit_contents {
+    width: 276px;
+}
+.schedule_search {
+    margin-right: 7px;
+}
+.schedule_setting .schedule_button button {
+    font-weight: 400;
+}
+.schedule_setting .schedule_button button i {
+    font-size: 10px;
+    color: #808080;
+}
+/*스케줄검색, 리스트보기 버튼 시작*/
+
+/*날짜 영역 시작*/
+.date_wrap {
+    width: calc(100% - 553px);
+    padding-top: 15px;
+    text-align: center;
+}
+.date_wrap button {
+    display: inline-block;
+    border: none;
+}
+.date_wrap button img {
+    vertical-align: inherit;
+}
+.date_wrap p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: #212529;
+}
+.date_wrap p span {
+    font-weight: 700;
+    transform:skew(-0.028deg);
+}
+.date_wrap .date {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    color: #393939;
+}
+/*날짜 영역 끝*/
+
+/*자동새로고침, 스케줄 on,off 버튼 시작*/
+.contents_button {
+    width: 277px;
+}
+.contents_button > div {
+    float: left;
+    padding-top: 55px;
+}
+.divider_line {
+    margin: 0 7px;
+    line-height: 28px;
+}
+.auto_refresh_button > *,
+.schedule_button > * {
+    float: left;
+}
+.auto_refresh_button p,
+.schedule_button p {
+    margin-bottom: 0;
+    margin-right: 7px;
+    line-height: 28px;
+    color: #393939;   
+}
+.auto_refresh_button input[type="checkbox"],
+.schedule_button input[type="checkbox"] { 
+    display: none; 
+} 
+.auto_refresh_button .label_on-off,
+.schedule_button .label_on-off { 
+    overflow: hidden; 
+    position: relative; 
+    display: inline-block; 
+    width: 62px;
+    height: 28px;
+    margin-bottom: 0;
+    -webkit-border-radius: 30px; 
+    -moz-border-radius: 30px; 
+    border-radius: 30px; 
+    background-color: #cccccc; 
+    color: #fff; 
+    font-weight: bold; 
+    cursor: pointer; 
+    -webkit-transition: all .3s; 
+    -moz-transition: all .3s; 
+    -ms-transition: all .3s; 
+    -o-transition: all .3s; 
+    transition: all .3s; 
+} 
+.schedule_button .label_on-off {
+    background-color: #a2a2a2;
+}
+.auto_refresh_button .label_on-off > *,
+.schedule_button .label_on-off > * {
+    vertical-align: middle; 
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s; 
+    -ms-transition: all .3s; 
+    -o-transition: all .3s; 
+    transition: all .3s; 
+    font-size: 12px; 
+    font-family: 'Montserrat', sans-serif;
+} 
+.auto_refresh_button .label_on-off .marble,
+.schedule_button .label_on-off .marble { 
+    position: absolute; 
+    top: 4px; 
+    left: 5px; 
+    display: block; 
+    width: 20px; 
+    height: 20px; 
+    background-color: #fff; 
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    border-radius: 50%; 
+} 
+.auto_refresh_button .label_on-off .on,
+.schedule_button .label_on-off .on { 
+    display: none; 
+    padding-left: 11px; 
+    line-height: 28px;
+    user-select: none;
+} 
+.auto_refresh_button .label_on-off .off,
+.schedule_button .label_on-off .off { 
+    padding-left: 29px;
+    line-height: 28px;
+    user-select: none;
+} 
+.auto_refresh_button .input_on-off:checked + .label_on-off { 
+    background-color: #1abc9c; 
+} 
+.schedule_button .input_on-off:checked + .label_on-off { 
+    background-color: #101938; 
+} 
+.auto_refresh_button .input_on-off:checked + .label_on-off .on,
+.schedule_button .input_on-off:checked + .label_on-off .on { 
+    display: inline-block; 
+} 
+.auto_refresh_button .input_on-off:checked + .label_on-off .off,
+.schedule_button .input_on-off:checked + .label_on-off .off { 
+    display: none; 
+} 
+.auto_refresh_button .input_on-off:checked + .label_on-off .marble,
+.schedule_button .input_on-off:checked + .label_on-off .marble { 
+    left: 37px;
+}
+/*자동새로고침, 스케줄 on,off 버튼 끝*/
+
+/*스케줄 검색 팝업 시작*/
+
+/*체크박스 style 시작*/
+.checkbox li {
+    margin: 4px 0;
+}
+input[id="chk_all"] {
+    display: none;
+}
+input[id="chk_all"] + label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    cursor: pointer;
+    background-image: url(../images/checkbox.png);
+    background-repeat: no-repeat;
+}
+input[id="chk_all"]:checked + label {
+    background-image: url(../images/checkbox_on.png);
+    background-repeat: no-repeat;
+}
+.checkbox input[type="checkbox"] {
+	display: none;
+}
+.checkbox input + label {
+    display: inline-block;
+    width: 198px;
+    height: 16px;
+    text-indent: 25px;
+    margin-top: 2px;
+    margin-bottom: 0;
+    cursor: pointer;
+    background-image: url(../images/checkbox.png);
+    background-repeat: no-repeat;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.checkbox input:checked + label {
+	background-image: url(../images/checkbox_on.png);
+    background-repeat: no-repeat;
+}
+/*체크박스 style 끝*/
+
+.schedule_setting input[type="date"] {
+    width: 100%;
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+.schedule_setting > div.schedule_search_popup {
+    float: none;
+    position: absolute;
+    top: 90px;
+    z-index: 200;
+    width: 235px;
+    height: 580px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 1px 2px 5px #e9ecef;
+    color: #222;
+    opacity: 0;
+    transition: all ease 0.4s;
+    visibility:hidden;
+}
+div.schedule_search_popup > div {
+    padding: 15px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+div.schedule_search_popup > div.search_date {
+    padding-top: 0;
+}
+div.schedule_search_popup p {
+    margin-bottom: 10px;
+    font-weight: 800;
+    transform:skew(-0.028deg);
+}
+.live_type2_click {
+    height: 205px;
+    line-height: 161px;
+    text-align: center;
+}
+.live_type2 {
+    display: none;
+}
+.scroll {
+    overflow-y: scroll;
+    height: 145px;
+}
+.scroll::-webkit-scrollbar {
+    width:5px;
+    padding-right: 10px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+}
+.scroll::-webkit-scrollbar-track {
+    background-color: rgba(203,203,203,0.4);
+    border-radius: 10px;
+}
+button.search {
+    display: block;
+    width: 50px;
+    height: 28px;
+    margin: 23px auto;
+    background: #3fb8a0;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+}
+/*스케줄 검색 팝업 끝*/
+
+/*Schedule 영역 시작*/
+.schedule_body {
+    width: 100%;
+    height: 610px;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.schedule_body::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    padding-right: 20px;
+}
+.schedule_body::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 10px;
+}
+.schedule_body::-webkit-scrollbar-track {
+    background-color: rgba(203,203,203,0.4);
+    border-radius: 10px;
+}
+.schedule_body .day_wrap {
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    margin-bottom: 1px;
+}
+.schedule_body .day_wrap,
+.schedule_wrap .schedule {
+    user-select: none;
+}
+.schedule_wrap {
+    width: 7180px;
+}
+.schedule_wrap .schedule > ul {
+    margin-top: -1px;
+}
+.today_wrap, 
+.day_wrap > ul {
+    float: left;
+    background: #fff;
+}
+.day_wrap > ul > li {
+    display: inline-block;
+    width: 270px;
+    height: 70px;
+    padding-top: 3px;
+    color: #222;
+    border: 1px solid #ddd;
+    border-left: none;
+    box-sizing: border-box;
+}
+.day_wrap > ul > li.time_refresh > * {
+    font-weight: 600;
+}
+.day_wrap > ul > li > p {
+    padding-left: 5px;
+}
+.day_wrap > ul > li p {
+    margin-bottom: 0;
+}
+.day_wrap > ul > li.today_wrap {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    width: 145px;
+    height: 70px;
+    margin-left: 0px;
+    padding-left: 0;
+    color: #222;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.day_wrap > ul > li p.today_button {
+    width: 55px;
+    height: 20px;
+    margin: 10px auto 8px;
+    padding: 0;
+    line-height: 20px;
+    background: #101938;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px;;
+    cursor:pointer
+}
+.day_wrap .day_first .day {
+    margin-top: 3px;
+    font-size: 13px;
+    font-weight: 800;
+    text-indent: 0;
+    transform:skew(-0.028deg);
+}
+.day_wrap p.day {
+    margin-top:3px;
+    text-indent: -9999em;
+}
+.day_wrap .min {
+    width: 100%;
+}
+.day_wrap .min li {
+    float: left;
+    width: 4.46px;
+    height: 19px;
+    transform: skew(-0.028deg);
+}
+.schedule > ul > li {
+    background: #fefefe;
+}
+.schedule > ul > li:hover, 
+.schedule > ul > li:hover > div {
+    background: #fbfbfb;
+}
+.schedule > ul > li:hover .schedule_channel {
+    cursor: pointer;
+}
+.schedule > ul > li.other_livetype > * {
+    border-bottom: 1px solid #afafaf;
+}
+.schedule_channel {
+    float: left;
+    position: sticky;
+    left: 0;
+    z-index: 100;
+    width: 145px;
+    height: 81px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-top: none;
+    box-sizing: border-box;
+    background: #fff;
+    color: #222;
+}
+.schedule_channel:hover p {
+    text-decoration: underline;
+}
+.schedule_channel span {
+    display: block;
+    width: 100%;
+    padding: 20px 10px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 11px;
+}
+.schedule_channel p {
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transform:skew(-0.028deg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.schedule_channel p img {
+    margin-right: 5px;
+}
+.time_line {
+    float: left;
+    width: 270px;
+    margin-bottom: -6px;
+    border-bottom: 1px solid #dee2e6;
+    box-sizing: border-box;
+}
+.schedule > ul > li:first-child > div  {
+    user-select: auto;
+}
+.time_line li {
+    position: relative;
+    float: left;
+    width: 4.5px;
+    height: 80px;
+    border-right: 1px dashed rgba(150, 150, 150, 0);
+    box-sizing: border-box;
+}
+.time_line li:first-child {
+    margin-left: 0;
+}
+.time_line li:nth-child(10n) {
+    border-right: 1px dashed rgba(150, 150, 150, 0.3);
+}
+.time_line li:last-child {
+    border-right: 1px solid rgba(150, 150, 150, 0.3);
+}
+.schedule_box p {
+    margin-bottom: 0;
+    color: #000;
+}
+.schedule_box {
+    position: absolute;
+    width: 290px;
+    height: 81px;
+    z-index: 10;
+    background: #fff;
+    cursor: pointer;
+}
+.schedule_box > div {
+    padding: 12px 20px;
+    user-select: auto;
+}
+.schedule_box p:nth-of-type(1) {
+    display:inline-block;
+    width: 92%;
+    margin-bottom: -7px;
+    margin-left: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    transform:skew(-0.028deg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.schedule_box p:nth-of-type(2) {
+    margin-top: 2px;
+}
+.schedule_box p:nth-of-type(2),
+.schedule_box p:nth-of-type(3) {
+    width: 100%;
+    font-size: 11px;
+    font-weight: 600;
+    transform:skew(-0.028deg);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.prev_schedule {
+    background: #fcfcfc;
+    border: 1px dotted rgba(150, 150, 150, 0.45);
+}
+.prev_schedule p {
+    color: #adadad;
+}
+.now_schedule {
+    border: 1px solid #26af94;
+}
+.now_schedule .progress_wrap {
+    position: relative;
+    top: -1px;
+    left: 0px;
+    height: 3px;
+    padding: 0;
+    background: #ddd;
+    overflow: hidden;
+}
+.now_schedule .progress-bar {
+    float: left;
+    height: 3px;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0);
+    border-radius: 0 3px 3px 0;
+    width: 69%;
+    background: #1abb9c;
+    background: linear-gradient( to right, #3250b5, #1abc9c );
+}
+.next_schedule {
+    width: 100px;
+    border: 1px dashed rgba(150, 150, 150, 0.8);
+}
+.time_line li.now_line {
+    z-index: 99;
+    border-left: 1px solid red;
+}
+/*Schedule 영역 끝*/
+
+/*Schedule 등록, 상세보기 팝업 시작*/
+
+/*팝업 자연스럽게 띄우기*/
+.overlay {
+    background-color: rgba(0, 0, 0, 0.2);    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;    
+    left: 0;    
+    z-index: 200;
+    visibility: hidden;
+    cursor: default;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.schedule_popup {
+    display: inline-block;
+    width: 880px;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    top: 40%;
+    visibility: hidden;
+    z-index: 300;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.schedule_popup {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.close_icon {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: #585858;
+    font-size: 15px;
+    cursor: pointer;
+}
+.schedule_popup .sub_tit_tip {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+.schedule_cont > li {
+    margin-bottom: 20px;
+}
+.schedule_cont > li > div > p,
+.schedule_cont > li div.left_box > div > p,
+.schedule_cont > li div.right_box > div > p {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #212529;
+    transform:skew(-0.028deg);
+}
+.schedule_cont > li > div input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.schedule_cont > li.vid > div {
+    float: left;
+    width: calc(100% - 270px);
+}
+.schedule_cont > li.vid .checkbox {
+    float: left;
+    width: 250px;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+.schedule_cont > li.vid .checkbox li {
+    float: left;
+}
+.schedule_cont > li.vid .checkbox input + label {
+    width: 125px;
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #212529;
+    transform:skew(-0.028deg);
+}
+.schedule_cont p.select_content,
+.schedule_cont p.select_content {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.left_box,
+.right_box {   
+    float: left;
+    width: 49%;
+}
+.left_box > div,
+.right_box > div {
+    position: relative;
+    float: left;
+    width: 49%;
+}
+.left_box {
+    margin-right: 2%;
+}
+.left_box > div:first-of-type,
+.right_box > div:first-of-type {
+    margin-right: 2%;
+}
+.left_box > div.start_time, 
+.right_box > div.finish_time {
+    width: 100%;
+}
+.start_time {
+    margin-right: 2%;
+}
+.start_time > *, 
+.finish_time > * {
+    float: left;
+}
+.start_time > p, 
+.finish_time > p {
+    float: none;
+}
+.start_time > input[type=date], 
+.finish_time > input[type=date] {
+    width: calc(100% - 212px);
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.start_time p.select_content,
+.finish_time p.select_content,
+.start_time p.select_content > div,
+.finish_time p.select_content > div {
+    width: 100px;
+}
+.start_time div:first-of-type p.select_content,
+.finish_time div:first-of-type p.select_content {
+    margin: 0 5px;
+}
+div.select_box, 
+div.select_box {
+    position: relative;
+}
+.line3 .select_box:first-of-type .select_group {
+    width: 100px;
+    margin-left: 5px;
+}
+.line4 .live_type2 {
+    display: block;
+}
+.line5 .left_box > div.source,
+.line5 .left_box > div.source div {
+    width: 120px;
+    margin-right: 2%;
+}
+.line5 .source .select_content {
+    width: 120px;    
+}
+.line5 .source_name {
+    width: calc(98% - 120px);    
+}
+textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+textarea:focus {
+    outline: none;
+}
+.schedule_popup div.select_group {
+    top: 45px;
+}
+.line6, .line7 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ebebeb;
+}
+.line7 div.select_group{
+    max-height: 100px;
+}
+.registration_button,
+.modify_button {
+    width: 155px;
+    margin: 30px auto 0;
+}
+.modify_button {
+    display: none;
+}
+.registration_button button,
+.modify_button button {
+    float: left;
+    display: block;
+    width: 74px;
+    height: 36px;
+    border: none;
+    color: #fff;
+}
+.registration_button a.close_btn {
+    float: left;
+    display: block;
+    width: 74px;
+    height: 36px;
+    margin: 0 0 0 7px;
+    padding: 0 8px;
+    color: #fff;
+    font-weight: 600;
+    transform: skew(-0.028deg);
+    text-align: center;
+    line-height: 36px;
+    border: none;
+    border-radius: 3px;
+    background: #898989;
+    user-select: none;
+}
+.modify_button button.del_btn {
+    margin-left: 7px;
+    background: #d9534f;
+}
+.modify_tit {
+    display: none;
+}
+/*상세보기(수정)*/
+.modify_popup .registration_button {
+    display: none;
+}
+.modify_popup .modify_button {
+    display: block;
+}
+.modify_popup .vid input {
+    background: #f9f9f9;
+}
+.modify_popup .registration_tit {
+    display: none;
+}
+.modify_popup .modify_tit {
+    display: block;
+}
+
+/*Schedule 등록, 상세보기 팝업 끝*/
+
+/*리스트 보기 새창 시작*/
+
+body.new_window {
+    background: #f9f9f9;
+}
+.ostream_main2 {
+    min-height: auto !important;
+    padding: 20px 30px 30px;
+}
+.new_window_logo {
+    float: left;
+}
+.new_window_logo p {
+    margin: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: #585858;
+}
+.schedule_title_wrap {
+    float: left;
+}
+.schedule_search_wrap {
+    float: right;
+}
+.schedule_search_wrap > div {
+    float: left;
+}
+.schedule_search_wrap .live_type1 {
+    margin-right: 10px;
+}
+.schedule_search_wrap .live_type2 {
+    display: block;
+    position: relative;
+    margin-right: 20px;
+}
+.schedule_search_wrap .live_type1 p.select_content,
+.schedule_search_wrap .live_type2 p.select_content {
+    height: 36px;
+    line-height: 36px;
+}
+.schedule_search_wrap .live_type2:after {
+    content: "|";
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: -14px;
+    font-size: 22px;
+    font-weight: 100;
+    color: #ccc;
+}
+.schedule_search_wrap input[type=date] {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.list_search {
+    width: 60px;
+    height: 36px;
+    margin-left: 10px;
+    background: #464646;
+    border: 1px solid #464646;
+    color: #fff;
+}
+#scheduleList .table_tit {
+    font-size: 12px;
+}
+.ostream_main2 div.select_group {
+    top: 40px;
+}
+#scheduleList tr td {
+    width: 100%;
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*리스트 보기 새창 끝*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    .date_wrap .date {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .date_wrap .date {
+        font-size: 25px;
+    }
+    .schedule_setting h4, 
+    .schedule_setting .sub_tit_tip {
+        display: none;
+    }
+    .tit_contents {
+        width: 195px;
+    }
+    .tit_contents .schedule_button {
+        margin-top: 35px;
+    }
+    .contents_button > div {
+        padding-top: 35px;
+    }
+    .schedule_setting > div.contents_button {
+        float: right;
+        width: 231px;
+    }
+    .auto_refresh_button p {
+        width: 38px;
+        height: 30px;
+        overflow: hidden;
+    }
+    .date_wrap {
+        width: calc(100% - 427px);
+    }
+    .date_wrap .date {
+        font-size: 22px;
+    }
+    .date_wrap button {
+        vertical-align: middle;
+        margin-top: -10px;
+    }
+    .schedule_setting {
+        margin-bottom: 10px;
+    }
+    .date_wrap button {
+        padding: 4px;
+    }
+
+    /*검색팝업*/
+    .schedule_setting > div.schedule_search_popup {
+        top: 70px;
+    }
+
+    /*스케줄등록, 상세*/
+    .schedule_popup {
+        width: 60%;
+    }
+    .schedule_cont {
+        height: 460px;
+        padding-right: 10px;
+        overflow-y: scroll;
+    }
+    .schedule_cont::-webkit-scrollbar {
+        width:5px;
+        padding-right: 10px;
+    }
+    .schedule_cont::-webkit-scrollbar-thumb {
+        background-color: #d7d7d7;
+        border-radius: 10px;
+    }
+    .schedule_cont::-webkit-scrollbar-track {
+        background-color: rgba(203,203,203,0.4);
+        border-radius: 10px;
+    }
+    .left_box, .right_box {
+        float: none;
+        width: 100%;
+    }
+    .left_box {
+        margin-right: 0;
+    }
+    .schedule_cont > li.vid > div {
+        width: 100%;
+    }
+    .schedule_cont > li.vid .checkbox {
+        float: none;
+        margin: 0;
+    }
+    .schedule_cont > li > div:first-of-type {
+        margin-bottom: 20px;
+    }
+    .schedule_cont > li.line6 > div:first-of-type {
+        margin-bottom: 0px;
+    }
+
+    /*스케줄리스트*/
+    p.select_content, 
+    span.select_content {
+        width: 120px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .date_wrap {
+        width: calc(100% - 390px);
+        padding-top: 10px;
+    }
+    .date_wrap .date {
+        font-size: 18px;
+    }
+    .schedule_setting {
+        margin-bottom: 0;
+    }
+    .tit_contents {
+        width: 175px;
+    }
+    .schedule_setting .schedule_button button {
+        font-size: 11px;
+    }
+    .contents_button > div {
+        font-size: 11px;
+    }
+    .schedule_setting > div.contents_button {
+        width: 215px;
+    }
+    .auto_refresh_button p, .schedule_button p {
+        margin-right: 4px;
+    }
+    .auto_refresh_button p {
+        width: 34px;
+    }
+    .date_wrap button {
+        padding: 2px;
+        margin-top: -6px;
+    }
+    .date_wrap p {
+        margin-bottom: 5px;
+    }
+    #scheduleList .table_tit {
+        font-size: 11px;
+    }
+    .schedule_title_wrap {
+        width: 100%;
+    }
+    .schedule_search_wrap {
+        float: left;
+        margin-bottom: 20px;
+    }
+    p.select_content, 
+    span.select_content {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main_box {
+        margin-top: 0;
+    }
+    .title_wrap .common_btn {
+        width: auto;
+        margin-top: 15px;
+    }
+    .schedule_popup {
+        width: 70%;
+    }
+    #scheduleList .table_tit th {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
